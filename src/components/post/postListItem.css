@@ -1,0 +1,7 @@
+.post-item{
+    border: 1px solid #4CAF50 ;
+    border-radius: 10px;
+    box-sizing: border-box;
+	margin: 1.5%;
+  box-shadow: 0 10px 28px -7px rgba(0,0,0,0.1);
+}

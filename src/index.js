@@ -1,12 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter} from 'react-router-dom'
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Template from './components/template/template';
+import Dashboard from './components/dashboard/dashboard';
+import { Provider } from "react-redux";
+import store from "./state/store/index";
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const isLoggedIn = false;
+let routing;
+
+const pageToRender = () =>{
+
+if(isLoggedIn){
+    routing = 
+    (
+       <Provider store={store}>
+       <BrowserRouter>
+       <Dashboard />
+       </BrowserRouter>
+       </Provider>
+         )   
+}
+else{
+ routing = 
+ ( <Provider store={store}>
+    <BrowserRouter>
+    <Template />
+    </BrowserRouter>
+    </Provider>
+      )   
+}
+}
+
+pageToRender();
+    
+   
+ReactDOM.render(routing, document.getElementById('root'));

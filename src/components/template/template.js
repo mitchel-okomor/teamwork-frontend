@@ -13,10 +13,11 @@ export default function Template () {
     <div className="container">
       <Header className ="header" />
 <Navigation className ="navigation" />
+
 <Switch>
 <Route exact path="/" component={Home} />
         <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
+        <Route exact path="/login" component={Login} />
 </Switch>
 
 <Footer className = "footer"/> 

@@ -5,7 +5,7 @@ import {DATA_LOADED, ADD_ARTICLE, LOGIN_USER} from '../constants/index';
 const initialState = {
     articles: [],
     remoteArticles: [],
-    currentUser: {}
+    currentUser: []
 };
 
 function rootReducer(state = initialState, action){

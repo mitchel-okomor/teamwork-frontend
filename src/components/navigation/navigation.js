@@ -1,40 +1,60 @@
 import React, { Component } from 'react';
 import './navigation.css';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
-
+import { Link} from 'react-router-dom'
+import isLoggedIn from '../../helpers/checkLoggin';
 
 export default class Navigation extends Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      loggedIn: false
+    }
+  }
+
+componentWillMount(){
+  console.log("Nav isLoggin:" +isLoggedIn());
+  if(isLoggedIn()){
+    this.setState({
+      loggedIn:true
+    })
+  }
+}
+
   render() {
-let isLoggedIn = false;
-const fName = "";
-const role = "";
-    if (isLoggedIn){
+
+    if (this.state.loggedIn){
       return (
-        <div className="navigation">
+        <nav className="navigation">
   
-  <div><Link to="/">Home</Link> </div>
+  <div><Link className="home-link" to="/">Home</Link> </div>
            <ul className="nav-list">
   
-  <li><a href="" >{fName}</a></li>
-  <li><a href="" >{role}</a></li>
-  <li><a href="" >Logout</a></li>
+           <li><Link to="/profile">My Account</Link></li>
+           <li><Link to="/logout">Logout</Link></li>
   
   
            </ul>
-        </div>
+        </nav>
       )
     }
+
+    else{
+      
     return (
-      <div className="navigation">
+      <nav className="navigation">
 
   <div><Link to="/">Home</Link> </div>
+  
          <ul className="nav-list">
 
 <li><Link to="/signup">Signup</Link></li>
 
 <li><Link to="/login">Login</Link></li>
          </ul>
-      </div>
+      </nav>
     )
   }
+    }
 }

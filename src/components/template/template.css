@@ -11,3 +11,9 @@
 .side{grid-area: side;}
 .main{grid-area: main;}
 .footer{grid-area: footer}
+
+
+link{
+    text-decoration: none;
+
+}

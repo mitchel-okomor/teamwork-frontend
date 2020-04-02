@@ -5,7 +5,7 @@ import {userLoginFetch} from '../../state/actions/index';
 
 class Login extends Component {
   state = {
-    username: "",
+    email: "",
     password: ""
   }
 
@@ -17,18 +17,19 @@ class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
+    console.log(this.state);
     this.props.userLoginFetch(this.state)
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="login" onSubmit={this.handleSubmit}>
         <h1>Login</h1>
 
         <label>Username</label>
         <input
-          name='username'
-          placeholder='Username'
+          name='email'
+          placeholder='Email'
           value={this.state.username}
           onChange={this.handleChange}
           /><br/>

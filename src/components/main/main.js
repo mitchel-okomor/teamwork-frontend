@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
-import PostListItems from '../post/postListItem';
 import './main.css';
+import PostListItems from '../post/postListItem';
+import LeftAside from '../side/side';
+import withAuth from '../../services/withAuth';
 
-export default class Main extends Component {
+ class Main extends Component {
    
 
     
   render () {
     return (
       <section className="mainContent">
-       <PostListItems />
+<LeftAside className="left-aside"/>
+       <PostListItems className="post-list-items"/>
       </section>
     );
   }
 }
+export default withAuth(Main) ;

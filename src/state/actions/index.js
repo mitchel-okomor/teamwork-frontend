@@ -75,16 +75,20 @@ export const userLoginFetch = user => {
     })
       .then(res => res.json())
       .then(data => {
+          
         console.log(data);
         if (data.status === 'error') {
           console.log(data.error);
         } else {
           localStorage.setItem("token", data.data.token);
           console.log(data.data.token);
+           history.push('/')
+       window.location.reload();
         dispatch(loginUser(data.data.user));
-          history.push('/')
         }
       })
+      
+     
   }
 }
 
@@ -103,13 +107,14 @@ export const getProfileFetch = () => {
       })
         .then(resp => resp.json())
         .then(data => {
+            history.push('/dashboard')
           if (data.message) {
             // An error will occur if the token is invalid.
             // If this happens, you may want to remove the invalid token.
             localStorage.removeItem("token")
           } else {
             dispatch(loginUser(data.data.user))
-            history.push('/dashboard')
+          
 
           }
         })

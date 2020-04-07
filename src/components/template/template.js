@@ -7,6 +7,7 @@ import Footer from '../footer/footer';
 import Signup from '../signup/signup';
 import Login from '../login/login';
 import Home from '../home/home';
+import Dashboard from '../dashboard/dashboard';
 
 export default function Template () {
   return (

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './navigation.css';
 import { Link} from 'react-router-dom'
 import isLoggedIn from '../../helpers/checkLoggin';
+import logout from '../../helpers/Logout';
 
 export default class Navigation extends Component {
 
@@ -10,6 +11,7 @@ export default class Navigation extends Component {
 
     this.state = {
       loggedIn: false
+
     }
   }
 
@@ -22,6 +24,7 @@ componentWillMount(){
   }
 }
 
+
   render() {
 
     if (this.state.loggedIn){
@@ -32,9 +35,7 @@ componentWillMount(){
            <ul className="nav-list">
   
            <li><Link to="/profile">My Account</Link></li>
-           <li><Link to="/logout">Logout</Link></li>
-  
-  
+           <li ><Link onClick={() => { logout() }}>Logout</Link></li>
            </ul>
         </nav>
       )

@@ -1,5 +1,19 @@
 .home{
     min-height: 100vh;
-    margin: 0 50px;
+color: black;
+margin: auto;
 
+  width: 60%;
+ box-shadow: 5px 5px 200px 5px #888888;
+  padding: 10px;
+  
+}
+
+.home h1{
+    text-align: center;
+    margin: 10px;
+}
+
+.home p{
+    padding: 10px;
 }

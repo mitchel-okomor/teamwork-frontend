@@ -1,9 +1,9 @@
 
 .side{
     box-sizing: border-box;
-   width: 30%;
+   width: 25%;
    min-height: 100vh;
-   background-color: #fff;
+   background-color:whitesmoke;
    padding: 20px;
 }
 

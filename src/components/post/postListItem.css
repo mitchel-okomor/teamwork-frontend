@@ -1,5 +1,61 @@
+
 .post-item{
- color: aqua;
- width: 60%;
- min-height: 100vh;
+    width: 50%;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 100%;
+padding:20px 0 20px 20px;
+margin: 50px 50px 20px 20px ;
+color: black;
+border-radius: 20px solid rgba(0,0,0,0.2);
+}
+
+
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-container {
+    box-sizing: border-box;
+padding: 16px 0 16px 16px;
+margin: 0 0 10px 10px;
+width: 100%;
+height: fit-content;
+}
+.card-container p{
+    width: fit-content;
+}
+.card-header{
+display:grid ;
+grid-template-columns: auto auto;
+padding: 10px;
+justify-content: space-between;
+}
+
+.extras{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.extras div{width: fit-content;
+    margin-top: 30px;
+}
+
+.card-header img {
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px;
+    background: url("https://dummyimage.com/300x300/7EC0EE/000&text=Product+Image+1")
+}
+
+.extras div img{
+    margin: 10px 0 0 10px;
+
+    width: 20px; 
+    height: 20px;
+    background: url("https://dummyimage.com/300x300/7EC0EE/000&text=Product+Image+1")  
 }

@@ -1,0 +1,19 @@
+
+.side{
+    box-sizing: border-box;
+   width: 30%;
+   min-height: 100vh;
+   background-color: #fff;
+   padding: 20px;
+}
+
+
+aside ul li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+aside ul li a{
+    text-decoration: none;
+    color: rgb(9, 111, 158);
+}
